@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RYDEX | Fleet</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard-body">
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <a href="index.html">RYDEX</a>
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-title">
+                MAIN MENU
+            </p>
+
+            <a href="dashboard.html" class="sidebar-link">
+
+                <i class="bi bi-bar-chart-line"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="fleet.html" class="sidebar-link active">
+
+                <i class="bi bi-car-front"></i>
+
+                <span>Fleet</span>
+
+            </a>
+
+
+            <a href="bookings.html" class="sidebar-link">
+
+                <i class="bi bi-calendar-check"></i>
+
+                <span>Bookings</span>
+
+            </a>
+
+
+            <p class="nav-title sidebar-second-title">
+                MANAGEMENT
+            </p>
+
+
+            <a href="#" class="sidebar-link">
+
+                <i class="bi bi-people"></i>
+
+                <span>Customers</span>
+
+            </a>
+
+
+            <a href="#" class="sidebar-link">
+
+                <i class="bi bi-credit-card"></i>
+
+                <span>Payments</span>
+
+            </a>
+
+
+            <a href="#" class="sidebar-link">
+
+                <i class="bi bi-bar-chart"></i>
+
+                <span>Reports</span>
+
+            </a>
+
+
+            <p class="nav-title sidebar-second-title">
+                SYSTEM
+            </p>
+
+
+            <a href="#" class="sidebar-link">
+
+                <i class="bi bi-gear"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="index.html" class="sidebar-link">
+
+                <i class="bi bi-box-arrow-left"></i>
+
+                <span>Back to Website</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="dashboard-content fleet-main">
+
+
+        <!-- ================= PAGE HEADER ================= -->
+
+        <div class="fleet-page-header">
+
+            <div>
+
+                <p class="dashboard-greeting">
+                    VEHICLE MANAGEMENT
+                </p>
+
+                <h1>
+                    Fleet
+                </h1>
+
+                <p class="page-description">
+                    Manage and monitor your premium vehicle collection.
+                </p>
+
+            </div>
+
+
+            <button class="gold-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#addVehicleModal">
+
+                <i class="bi bi-plus-lg"></i>
+
+                Add Vehicle
+
+            </button>
+
+        </div>
+
+
+
+        <!-- ================= FLEET STATS ================= -->
+
+        <section class="fleet-stats">
+
+
+            <div class="fleet-stat-card">
+
+                <div class="fleet-stat-icon">
+
+                    <i class="bi bi-car-front"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Total Vehicles
+                    </span>
+
+                    <strong>
+                        56
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="fleet-stat-card">
+
+                <div class="fleet-stat-icon">
+
+                    <i class="bi bi-check-circle"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Available
+                    </span>
+
+                    <strong>
+                        32
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="fleet-stat-card">
+
+                <div class="fleet-stat-icon">
+
+                    <i class="bi bi-key"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Rented
+                    </span>
+
+                    <strong>
+                        18
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="fleet-stat-card">
+
+                <div class="fleet-stat-icon">
+
+                    <i class="bi bi-tools"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        In Service
+                    </span>
+
+                    <strong>
+                        6
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= SEARCH + FILTER ================= -->
+
+        <section class="fleet-toolbar">
+
+            <div class="fleet-search">
+
+                <i class="bi bi-search"></i>
+
+                <input
+                    type="text"
+                    id="fleetSearch"
+                    placeholder="Search vehicles...">
+
+            </div>
+
+
+            <select class="fleet-filter" id="brandFilter">
+
+                <option value="all">
+                    All Brands
+                </option>
+
+                <option value="BMW">
+                    BMW
+                </option>
+
+                <option value="Mercedes">
+                    Mercedes
+                </option>
+
+                <option value="Porsche">
+                    Porsche
+                </option>
+
+                <option value="Audi">
+                    Audi
+                </option>
+
+            </select>
+
+
+            <select class="fleet-filter" id="typeFilter">
+
+                <option value="all">
+                    All Types
+                </option>
+
+                <option value="Sports">
+                    Sports
+                </option>
+
+                <option value="Luxury">
+                    Luxury
+                </option>
+
+                <option value="SUV">
+                    SUV
+                </option>
+
+                <option value="Supercar">
+                    Supercar
+                </option>
+
+            </select>
+
+
+            <select class="fleet-filter" id="statusFilter">
+
+                <option value="all">
+                    All Status
+                </option>
+
+                <option value="Available">
+                    Available
+                </option>
+
+                <option value="Rented">
+                    Rented
+                </option>
+
+                <option value="Service">
+                    In Service
+                </option>
+
+            </select>
+
+        </section>
+
+
+
+        <!-- ================= VEHICLE GRID ================= -->
+
+        <section class="vehicle-grid" id="vehicleGrid">
+
+
+            <!-- ================= BMW ================= -->
+
+            <div class="vehicle-card"
+                data-brand="BMW"
+                data-type="Sports"
+                data-status="Available">
+
+                <div class="vehicle-image">
+
+                    <span class="vehicle-status available-status">
+                        Available
+                    </span>
+
+                    <img src="images/bmw-m4.png"
+                        alt="BMW M4 Competition">
+
+                </div>
+
+
+                <div class="vehicle-card-content">
+
+                    <div class="vehicle-category">
+                        SPORTS
+                    </div>
+
+                    <h3>
+                        BMW M4 Competition
+                    </h3>
+
+                    <p class="vehicle-model">
+                        2025 • Automatic • Petrol
+                    </p>
+
+
+                    <div class="vehicle-bottom">
+
+                        <div class="vehicle-price">
+
+                            <strong>
+                                ₹8,500
+                            </strong>
+
+                            <span>
+                                / day
+                            </span>
+
+                        </div>
+
+
+                        <button class="vehicle-view-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#vehicleDetailsModal">
+
+                            View Details
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= MERCEDES ================= -->
+
+            <div class="vehicle-card"
+                data-brand="Mercedes"
+                data-type="Luxury"
+                data-status="Rented">
+
+                <div class="vehicle-image">
+
+                    <span class="vehicle-status rented-status">
+                        Rented
+                    </span>
+
+                    <img src="images/mercedes-amg.png"
+                        alt="Mercedes AMG GT">
+
+                </div>
+
+
+                <div class="vehicle-card-content">
+
+                    <div class="vehicle-category">
+                        GRAND TOURER
+                    </div>
+
+                    <h3>
+                        Mercedes AMG GT
+                    </h3>
+
+                    <p class="vehicle-model">
+                        2025 • Automatic • Petrol
+                    </p>
+
+
+                    <div class="vehicle-bottom">
+
+                        <div class="vehicle-price">
+
+                            <strong>
+                                ₹12,000
+                            </strong>
+
+                            <span>
+                                / day
+                            </span>
+
+                        </div>
+
+
+                        <button class="vehicle-view-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#vehicleDetailsModal">
+
+                            View Details
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= PORSCHE ================= -->
+
+            <div class="vehicle-card"
+                data-brand="Porsche"
+                data-type="Supercar"
+                data-status="Available">
+
+                <div class="vehicle-image">
+
+                    <span class="vehicle-status available-status">
+                        Available
+                    </span>
+
+                    <img src="images/porsche-911.png"
+                        alt="Porsche 911 Turbo">
+
+                </div>
+
+
+                <div class="vehicle-card-content">
+
+                    <div class="vehicle-category">
+                        SUPERCAR
+                    </div>
+
+                    <h3>
+                        Porsche 911 Turbo
+                    </h3>
+
+                    <p class="vehicle-model">
+                        2025 • Automatic • Petrol
+                    </p>
+
+
+                    <div class="vehicle-bottom">
+
+                        <div class="vehicle-price">
+
+                            <strong>
+                                ₹15,000
+                            </strong>
+
+                            <span>
+                                / day
+                            </span>
+
+                        </div>
+
+
+                        <button class="vehicle-view-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#vehicleDetailsModal">
+
+                            View Details
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= AUDI ================= -->
+
+            <div class="vehicle-card"
+                data-brand="Audi"
+                data-type="SUV"
+                data-status="Service">
+
+                <div class="vehicle-image">
+
+                    <span class="vehicle-status service-status">
+                        In Service
+                    </span>
+
+                    <img src="images/audi-rs.png"
+                        alt="Audi RS">
+
+                </div>
+
+
+                <div class="vehicle-card-content">
+
+                    <div class="vehicle-category">
+                        PERFORMANCE SUV
+                    </div>
+
+                    <h3>
+                        Audi RS Q8
+                    </h3>
+
+                    <p class="vehicle-model">
+                        2025 • Automatic • Petrol
+                    </p>
+
+
+                    <div class="vehicle-bottom">
+
+                        <div class="vehicle-price">
+
+                            <strong>
+                                ₹10,500
+                            </strong>
+
+                            <span>
+                                / day
+                            </span>
+
+                        </div>
+
+
+                        <button class="vehicle-view-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#vehicleDetailsModal">
+
+                            View Details
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= BMW M8 ================= -->
+
+            <div class="vehicle-card"
+                data-brand="BMW"
+                data-type="Luxury"
+                data-status="Available">
+
+                <div class="vehicle-image">
+
+                    <span class="vehicle-status available-status">
+                        Available
+                    </span>
+
+                    <img src="images/bmw-m8.png"
+                        alt="BMW M8">
+
+                </div>
+
+
+                <div class="vehicle-card-content">
+
+                    <div class="vehicle-category">
+                        LUXURY
+                    </div>
+
+                    <h3>
+                        BMW M8 Gran Coupe
+                    </h3>
+
+                    <p class="vehicle-model">
+                        2025 • Automatic • Petrol
+                    </p>
+
+
+                    <div class="vehicle-bottom">
+
+                        <div class="vehicle-price">
+
+                            <strong>
+                                ₹11,000
+                            </strong>
+
+                            <span>
+                                / day
+                            </span>
+
+                        </div>
+
+
+                        <button class="vehicle-view-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#vehicleDetailsModal">
+
+                            View Details
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= MERCEDES G-WAGON ================= -->
+
+            <div class="vehicle-card"
+                data-brand="Mercedes"
+                data-type="SUV"
+                data-status="Available">
+
+                <div class="vehicle-image">
+
+                    <span class="vehicle-status available-status">
+                        Available
+                    </span>
+
+                    <img src="images/g-wagon.png"
+                        alt="Mercedes G Wagon">
+
+                </div>
+
+
+                <div class="vehicle-card-content">
+
+                    <div class="vehicle-category">
+                        LUXURY SUV
+                    </div>
+
+                    <h3>
+                        Mercedes G-Class
+                    </h3>
+
+                    <p class="vehicle-model">
+                        2025 • Automatic • Petrol
+                    </p>
+
+
+                    <div class="vehicle-bottom">
+
+                        <div class="vehicle-price">
+
+                            <strong>
+                                ₹14,000
+                            </strong>
+
+                            <span>
+                                / day
+                            </span>
+
+                        </div>
+
+
+                        <button class="vehicle-view-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#vehicleDetailsModal">
+
+                            View Details
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================================================= -->
+    <!-- ADD VEHICLE MODAL -->
+    <!-- ================================================= -->
+
+    <div class="modal fade"
+        id="addVehicleModal"
+        tabindex="-1"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content rydex-modal">
+
+                <div class="modal-header">
+
+                    <div>
+
+                        <span class="modal-label">
+                            FLEET MANAGEMENT
+                        </span>
+
+                        <h4>
+                            Add New Vehicle
+                        </h4>
+
+                    </div>
+
+                    <button type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+
+                <div class="modal-body">
+
+                    <form id="addVehicleForm">
+
+
+                        <div class="row">
+
+
+                            <!-- Vehicle Name -->
+
+                            <div class="col-md-6 mb-3">
+
+                                <label>
+                                    Vehicle Name
+                                </label>
+
+                                <input type="text"
+                                    class="form-control rydex-input"
+                                    placeholder="BMW M4 Competition"
+                                    required>
+
+                            </div>
+
+
+                            <!-- Brand -->
+
+                            <div class="col-md-6 mb-3">
+
+                                <label>
+                                    Brand
+                                </label>
+
+                                <select class="form-select rydex-input"
+                                    required>
+
+                                    <option value="">
+                                        Select Brand
+                                    </option>
+
+                                    <option>
+                                        BMW
+                                    </option>
+
+                                    <option>
+                                        Mercedes
+                                    </option>
+
+                                    <option>
+                                        Porsche
+                                    </option>
+
+                                    <option>
+                                        Audi
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- Type -->
+
+                            <div class="col-md-6 mb-3">
+
+                                <label>
+                                    Vehicle Type
+                                </label>
+
+                                <select class="form-select rydex-input"
+                                    required>
+
+                                    <option value="">
+                                        Select Type
+                                    </option>
+
+                                    <option>
+                                        Sports
+                                    </option>
+
+                                    <option>
+                                        Luxury
+                                    </option>
+
+                                    <option>
+                                        SUV
+                                    </option>
+
+                                    <option>
+                                        Supercar
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- Price -->
+
+                            <div class="col-md-6 mb-3">
+
+                                <label>
+                                    Daily Rental Price
+                                </label>
+
+                                <input type="number"
+                                    class="form-control rydex-input"
+                                    placeholder="8500"
+                                    required>
+
+                            </div>
+
+
+                            <!-- Transmission -->
+
+                            <div class="col-md-6 mb-3">
+
+                                <label>
+                                    Transmission
+                                </label>
+
+                                <select class="form-select rydex-input">
+
+                                    <option>
+                                        Automatic
+                                    </option>
+
+                                    <option>
+                                        Manual
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- Fuel -->
+
+                            <div class="col-md-6 mb-3">
+
+                                <label>
+                                    Fuel Type
+                                </label>
+
+                                <select class="form-select rydex-input">
+
+                                    <option>
+                                        Petrol
+                                    </option>
+
+                                    <option>
+                                        Diesel
+                                    </option>
+
+                                    <option>
+                                        Electric
+                                    </option>
+
+                                    <option>
+                                        Hybrid
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- Image -->
+
+                            <div class="col-12 mb-3">
+
+                                <label>
+                                    Vehicle Image
+                                </label>
+
+                                <input type="file"
+                                    class="form-control rydex-input"
+                                    accept="image/*">
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="modal-actions">
+
+                            <button type="button"
+                                class="cancel-btn"
+                                data-bs-dismiss="modal">
+
+                                Cancel
+
+                            </button>
+
+
+                            <button type="submit"
+                                class="gold-btn">
+
+                                <i class="bi bi-plus-lg"></i>
+
+                                Add Vehicle
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================================================= -->
+    <!-- VEHICLE DETAILS MODAL -->
+    <!-- ================================================= -->
+
+    <div class="modal fade"
+        id="vehicleDetailsModal"
+        tabindex="-1"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+
+            <div class="modal-content rydex-modal">
+
+
+                <div class="modal-header">
+
+                    <div>
+
+                        <span class="modal-label">
+                            VEHICLE DETAILS
+                        </span>
+
+                        <h4>
+                            BMW M4 Competition
+                        </h4>
+
+                    </div>
+
+                    <button type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+
+                <div class="modal-body">
+
+
+                    <div class="vehicle-details-layout">
+
+
+                        <!-- IMAGE -->
+
+                        <div class="details-image">
+
+                            <img src="images/bmw-m4.png"
+                                alt="BMW M4 Competition">
+
+                        </div>
+
+
+                        <!-- DETAILS -->
+
+                        <div class="details-info">
+
+                            <span class="vehicle-status available-status">
+                                Available
+                            </span>
+
+
+                            <h2>
+                                BMW M4 Competition
+                            </h2>
+
+
+                            <p class="details-description">
+                                A high-performance sports coupe
+                                delivering exceptional power,
+                                precision and luxury.
+                            </p>
+
+
+                            <div class="details-grid">
+
+
+                                <div class="detail-item">
+
+                                    <span>
+                                        Brand
+                                    </span>
+
+                                    <strong>
+                                        BMW
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="detail-item">
+
+                                    <span>
+                                        Model
+                                    </span>
+
+                                    <strong>
+                                        M4 Competition
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="detail-item">
+
+                                    <span>
+                                        Year
+                                    </span>
+
+                                    <strong>
+                                        2025
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="detail-item">
+
+                                    <span>
+                                        Transmission
+                                    </span>
+
+                                    <strong>
+                                        Automatic
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="detail-item">
+
+                                    <span>
+                                        Fuel
+                                    </span>
+
+                                    <strong>
+                                        Petrol
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="detail-item">
+
+                                    <span>
+                                        Seats
+                                    </span>
+
+                                    <strong>
+                                        4
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="details-price">
+
+                                <span>
+                                    Rental Price
+                                </span>
+
+                                <strong>
+                                    ₹8,500
+                                    <small>/ day</small>
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Main JS -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

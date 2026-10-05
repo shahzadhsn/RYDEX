@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RYDEX | Bookings</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard-body">
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <a href="index.html">RYDEX</a>
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-title">
+                MAIN MENU
+            </p>
+
+
+            <a href="dashboard.html" class="sidebar-link">
+
+                <i class="bi bi-bar-chart-line"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="fleet.html" class="sidebar-link">
+
+                <i class="bi bi-car-front"></i>
+
+                <span>Fleet</span>
+
+            </a>
+
+
+            <a href="bookings.html" class="sidebar-link active">
+
+                <i class="bi bi-calendar-check"></i>
+
+                <span>Bookings</span>
+
+            </a>
+
+
+            <p class="nav-title sidebar-second-title">
+                MANAGEMENT
+            </p>
+
+
+            <a href="#" class="sidebar-link">
+
+                <i class="bi bi-people"></i>
+
+                <span>Customers</span>
+
+            </a>
+
+
+            <a href="#" class="sidebar-link">
+
+                <i class="bi bi-credit-card"></i>
+
+                <span>Payments</span>
+
+            </a>
+
+
+            <a href="#" class="sidebar-link">
+
+                <i class="bi bi-bar-chart"></i>
+
+                <span>Reports</span>
+
+            </a>
+
+
+            <p class="nav-title sidebar-second-title">
+                SYSTEM
+            </p>
+
+
+            <a href="#" class="sidebar-link">
+
+                <i class="bi bi-gear"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="index.html" class="sidebar-link">
+
+                <i class="bi bi-box-arrow-left"></i>
+
+                <span>Back to Website</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="dashboard-content bookings-main">
+
+
+        <!-- ================= PAGE HEADER ================= -->
+
+        <div class="bookings-page-header">
+
+            <div>
+
+                <p class="dashboard-greeting">
+                    BOOKING MANAGEMENT
+                </p>
+
+                <h1>
+                    Bookings
+                </h1>
+
+                <p class="page-description">
+                    Manage reservations, customers and rental activity.
+                </p>
+
+            </div>
+
+
+            <button class="gold-btn">
+
+                <i class="bi bi-plus-lg"></i>
+
+                New Booking
+
+            </button>
+
+        </div>
+
+
+
+        <!-- ================= BOOKING STATS ================= -->
+
+        <section class="booking-stats">
+
+
+            <div class="booking-stat-card">
+
+                <div class="booking-stat-icon">
+
+                    <i class="bi bi-calendar-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Total Bookings
+                    </span>
+
+                    <strong>
+                        248
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="booking-stat-card">
+
+                <div class="booking-stat-icon">
+
+                    <i class="bi bi-check-circle"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Confirmed
+                    </span>
+
+                    <strong>
+                        186
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="booking-stat-card">
+
+                <div class="booking-stat-icon">
+
+                    <i class="bi bi-clock"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Pending
+                    </span>
+
+                    <strong>
+                        32
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="booking-stat-card">
+
+                <div class="booking-stat-icon">
+
+                    <i class="bi bi-check2-all"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Completed
+                    </span>
+
+                    <strong>
+                        30
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= TOOLBAR ================= -->
+
+        <section class="booking-toolbar">
+
+
+            <div class="booking-search">
+
+                <i class="bi bi-search"></i>
+
+                <input
+                    type="text"
+                    id="bookingSearch"
+                    placeholder="Search booking, customer or vehicle...">
+
+            </div>
+
+
+            <select class="booking-filter"
+                id="bookingStatusFilter">
+
+                <option value="all">
+                    All Status
+                </option>
+
+                <option value="Confirmed">
+                    Confirmed
+                </option>
+
+                <option value="Pending">
+                    Pending
+                </option>
+
+                <option value="Completed">
+                    Completed
+                </option>
+
+                <option value="Cancelled">
+                    Cancelled
+                </option>
+
+            </select>
+
+
+            <select class="booking-filter">
+
+                <option>
+                    All Dates
+                </option>
+
+                <option>
+                    Today
+                </option>
+
+                <option>
+                    This Week
+                </option>
+
+                <option>
+                    This Month
+                </option>
+
+            </select>
+
+        </section>
+
+
+
+        <!-- ================= BOOKINGS TABLE ================= -->
+
+        <section class="booking-table-card">
+
+
+            <div class="booking-table-header">
+
+                <div>
+
+                    <span class="panel-label">
+                        RESERVATIONS
+                    </span>
+
+                    <h3>
+                        All Bookings
+                    </h3>
+
+                </div>
+
+                <span class="booking-count">
+                    248 bookings
+                </span>
+
+            </div>
+
+
+            <div class="table-responsive">
+
+                <table class="booking-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Booking ID
+                            </th>
+
+                            <th>
+                                Customer
+                            </th>
+
+                            <th>
+                                Vehicle
+                            </th>
+
+                            <th>
+                                Rental Period
+                            </th>
+
+                            <th>
+                                Amount
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <!-- ================= ROW 1 ================= -->
+
+                        <tr>
+
+                            <td>
+                                <strong>#RYX1024</strong>
+                            </td>
+
+                            <td>
+                                Ahmed Khan
+                            </td>
+
+                            <td>
+                                BMW M4 Competition
+                            </td>
+
+                            <td>
+                                20 Aug – 23 Aug
+                            </td>
+
+                            <td>
+                                ₹25,500
+                            </td>
+
+                            <td>
+
+                                <span class="booking-status confirmed">
+                                    Confirmed
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="table-action"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#bookingDetailsModal">
+
+                                    <i class="bi bi-eye"></i>
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- ================= ROW 2 ================= -->
+
+                        <tr>
+
+                            <td>
+                                <strong>#RYX1025</strong>
+                            </td>
+
+                            <td>
+                                Rahul Sharma
+                            </td>
+
+                            <td>
+                                Mercedes AMG GT
+                            </td>
+
+                            <td>
+                                22 Aug – 26 Aug
+                            </td>
+
+                            <td>
+                                ₹48,000
+                            </td>
+
+                            <td>
+
+                                <span class="booking-status pending">
+                                    Pending
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="table-action"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#bookingDetailsModal">
+
+                                    <i class="bi bi-eye"></i>
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- ================= ROW 3 ================= -->
+
+                        <tr>
+
+                            <td>
+                                <strong>#RYX1026</strong>
+                            </td>
+
+                            <td>
+                                Arjun Mehta
+                            </td>
+
+                            <td>
+                                Porsche 911 Turbo
+                            </td>
+
+                            <td>
+                                15 Aug – 18 Aug
+                            </td>
+
+                            <td>
+                                ₹45,000
+                            </td>
+
+                            <td>
+
+                                <span class="booking-status completed">
+                                    Completed
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="table-action"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#bookingDetailsModal">
+
+                                    <i class="bi bi-eye"></i>
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- ================= ROW 4 ================= -->
+
+                        <tr>
+
+                            <td>
+                                <strong>#RYX1027</strong>
+                            </td>
+
+                            <td>
+                                Sameer Ali
+                            </td>
+
+                            <td>
+                                BMW M4 Competition
+                            </td>
+
+                            <td>
+                                12 Aug – 15 Aug
+                            </td>
+
+                            <td>
+                                ₹25,500
+                            </td>
+
+                            <td>
+
+                                <span class="booking-status cancelled">
+                                    Cancelled
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="table-action"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#bookingDetailsModal">
+
+                                    <i class="bi bi-eye"></i>
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================================================= -->
+    <!-- BOOKING DETAILS MODAL -->
+    <!-- ================================================= -->
+
+    <div class="modal fade"
+        id="bookingDetailsModal"
+        tabindex="-1"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content rydex-modal">
+
+
+                <!-- MODAL HEADER -->
+
+                <div class="modal-header">
+
+                    <div>
+
+                        <span class="modal-label">
+                            BOOKING DETAILS
+                        </span>
+
+                        <h4 id="modalBookingId">
+                            #RYX1024
+                        </h4>
+
+                    </div>
+
+
+                    <button type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+
+
+                <!-- MODAL BODY -->
+
+                <div class="modal-body">
+
+
+                    <div class="booking-details">
+
+
+                        <!-- Customer -->
+
+                        <div class="booking-detail-row">
+
+                            <div class="booking-detail-icon">
+
+                                <i class="bi bi-person"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Customer
+                                </span>
+
+                                <strong id="modalCustomer">
+                                    Ahmed Khan
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Vehicle -->
+
+                        <div class="booking-detail-row">
+
+                            <div class="booking-detail-icon">
+
+                                <i class="bi bi-car-front"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Vehicle
+                                </span>
+
+                                <strong id="modalVehicle">
+                                    BMW M4 Competition
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Pickup -->
+
+                        <div class="booking-detail-row">
+
+                            <div class="booking-detail-icon">
+
+                                <i class="bi bi-calendar-event"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Pick-up Date
+                                </span>
+
+                                <strong id="modalPickup">
+                                    20 Aug
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Return -->
+
+                        <div class="booking-detail-row">
+
+                            <div class="booking-detail-icon">
+
+                                <i class="bi bi-calendar-check"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Return Date
+                                </span>
+
+                                <strong id="modalReturn">
+                                    23 Aug
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Amount -->
+
+                        <div class="booking-detail-row">
+
+                            <div class="booking-detail-icon">
+
+                                <i class="bi bi-currency-rupee"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Total Amount
+                                </span>
+
+                                <strong id="modalAmount">
+                                    ₹25,500
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Status -->
+
+                        <div class="booking-detail-row">
+
+                            <div class="booking-detail-icon">
+
+                                <i class="bi bi-credit-card"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Status
+                                </span>
+
+                                <strong id="modalPayment">
+                                    Confirmed
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- MODAL FOOTER -->
+
+                <div class="modal-footer">
+
+                    <button type="button"
+                        class="cancel-btn"
+                        data-bs-dismiss="modal">
+
+                        Close
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= BOOTSTRAP JS ================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- ================= BOOKING MODAL JS ================= -->
+
+    <script>
+
+        document.querySelectorAll('.table-action').forEach(button => {
+
+            button.addEventListener('click', function () {
+
+                const row = this.closest('tr');
+
+                const cells = row.querySelectorAll('td');
+
+
+                // Booking ID
+
+                document.getElementById('modalBookingId').textContent =
+                    cells[0].textContent.trim();
+
+
+                // Customer
+
+                document.getElementById('modalCustomer').textContent =
+                    cells[1].textContent.trim();
+
+
+                // Vehicle
+
+                document.getElementById('modalVehicle').textContent =
+                    cells[2].textContent.trim();
+
+
+                // Dates
+
+                const dates =
+                    cells[3].textContent.trim().split('–');
+
+
+                document.getElementById('modalPickup').textContent =
+                    dates[0].trim();
+
+
+                document.getElementById('modalReturn').textContent =
+                    dates[1].trim();
+
+
+                // Amount
+
+                document.getElementById('modalAmount').textContent =
+                    cells[4].textContent.trim();
+
+
+                // Status
+
+                document.getElementById('modalPayment').textContent =
+                    cells[5].textContent.trim();
+
+            });
+
+        });
+
+    </script>
+
+
+    <!-- Main JS -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
